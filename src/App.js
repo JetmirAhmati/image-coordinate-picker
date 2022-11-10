@@ -57,8 +57,8 @@ const App = () => {
     const { clientX, clientY } = event;
     const rect = target.getBoundingClientRect();
 
-    const clickXPos = clientX - rect.left - tolerance;
-    const clickYPos = clientY - rect.top - tolerance;
+    const clickXPos = Math.round(clientX - rect.left - tolerance);
+    const clickYPos = Math.round(clientY - rect.top - tolerance);
     setCounter(counter + 1);
     const hotpsotId = `hotspotid-${counter}`;
     const clickedCord = {hotpsotId, clickXPos, clickYPos };
