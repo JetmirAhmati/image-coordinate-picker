@@ -93,7 +93,7 @@ const App = () => {
           </p>
           <div>
             {cordinatePickerList.map((item, i) => (
-              <div data-id={item.hotpsotId} key={i}>hotpsotId: <b>{item.hotpsotId}</b> Coordinates: <b>{item.clickXPos}, {item.clickYPos}</b></div>
+              <div data-id={item.hotpsotId} key={i}>hotpsot: <b>{item.hotpsotId}</b> Coordinates: <b>{item.clickXPos}, {item.clickYPos}</b></div>
             ))}
           </div>
         </>
