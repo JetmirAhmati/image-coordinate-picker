@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, {useEffect, useRef, useState } from "react";
 
 const loadImage = (setImageDimensions, imageUrl) => {
   if (!imageUrl) return;
@@ -77,7 +77,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <img src={logo} width="45px" />
+      <img src={logo} width="45px" alt="logo" />
       <p>Image Cordinate Picker</p>
       <button onClick={handleClick}> Upload a image </button>
       <input
@@ -95,6 +95,7 @@ const App = () => {
                 src={imageUrl}
                 ref={imageRef}
                 onClick={(event) => handleImageClick(event)}
+                alt="image-picker"
               />
               {cordinatePickerList.map((item, i) => (
                 <div
