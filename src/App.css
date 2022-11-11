@@ -53,11 +53,12 @@ code {
 
 .container {
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 1440px;
 }
 
 .image-placeholder img {
-  border: 1px solid blue;
+  outline: 1px solid blue;
+  width: 100%;
 }
 
 .image-placeholder {
@@ -77,10 +78,13 @@ button {
   border-radius: 50%;
 }
 
+ul {
+  list-style: none;
+}
+
 button.remove-btn {
   margin-left: 10px;
 }
-
 
 .cordinates.active {
   display: none;

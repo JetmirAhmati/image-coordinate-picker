@@ -89,7 +89,7 @@ const App = () => {
 
       {imageUrl && (
         <div className="container">
-          <div>
+          <div className="image-coordinate-picker">
             <div className="image-placeholder">
               <img
                 src={imageUrl}
@@ -117,22 +117,17 @@ const App = () => {
             {imageDimensions.width} <b>Height:</b>
             {imageDimensions.height}{" "}
           </p>
-          <div>
+          <ul>
             {cordinatePickerList.map((item, i) => (
-              <div className="cordinates" data-id={item.hotpsotId} key={i}>
-                hotpsot: <b>{item.hotpsotId}</b> Coordinates:{" "}
-                <b>
-                  {item.clickXPos}, {item.clickYPos}
-                </b>
-                <button
-                  className=" remove-btn"
-                  onClick={() => removehotspots(item.hotpsotId)}
-                >
-                  Remove
+              <li className="cordinates" data-id={item.hotpsotId} key={i}>
+               <span>hotpsot:</span> <b>{item.hotpsotId} {" "}</b>Coordinates:{" "}
+                <b>{item.clickXPos},{item.clickYPos}</b>
+                <button className=" remove-btn"onClick={() => removehotspots(item.hotpsotId)}>
+                  Remove hotpsot
                 </button>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </>
       )}
     </div>
